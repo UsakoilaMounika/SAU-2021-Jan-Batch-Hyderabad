@@ -1,0 +1,37 @@
+2)
+SELECT airlineid,
+       SUM(distance) AS DistanceSum
+       FROM `travel-sample`
+WHERE type="route"
+GROUP BY airlineid;
+
+3)INNER JOIN:
+SELECT *
+FROM `travel-sample` r
+    JOIN `travel-sample` a ON r.airlineid = META(a).id
+WHERE r.sourceairport = "SFO"
+
+4)LEFT JOIN:
+SELECT *
+FROM `travel-sample` r
+LEFT JOIN `travel-sample` a
+ON r.airlineid = META(a).id
+WHERE r.sourceairport = "SFO" 
+
+5) RIGHT JOIN:
+SELECT *
+FROM `travel-sample` r
+RIGHT JOIN `travel-sample` a
+ON r.airlineid = META(a).id
+WHERE r.sourceairport = "SFO" 
+
+
+4)map
+function (doc, meta) {
+  if(doc.type == "router")
+  	emit(meta.id, null);
+}
+
+-- reduce
+_count
+

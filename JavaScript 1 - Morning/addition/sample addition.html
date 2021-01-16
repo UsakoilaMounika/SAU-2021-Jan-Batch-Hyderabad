@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment3</title>
+        <style>
+            div{
+                text-align: center;
+                margin: 5%;
+            }
+            input{
+                text-align: center;
+                margin: 1%;
+            }
+            btn{
+                
+               top-left:2%; 
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <span><input id="number1" type="number" ></span>
+            <label>+</label>
+            
+            <span><input id="number2" type="number" ></span>
+            <label>=</label>
+            
+            <span><input id="Result"><br></span>
+            
+            <div class="btn">
+            <button  onclick="addition() ">Add</button></div>
+        </div>
+        <script>
+            function addition(){
+                let numb1=document.getElementById("number1").value;
+                let numb2=document.getElementById("number2").value;
+
+                let Result=Number(numb1)+Number(numb2)
+                document.getElementById('Result').value=Result;
+            }
+        </script>
+    </body>
+</html>

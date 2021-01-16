@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Js2</title>
+    </head>
+    <body>
+        <p>Custom reduce</p>
+        <script>
+            function customreduce(arr,reducefn){
+                let res=0;
+                for(var i=0;i<arr.length;i++)
+                {
+                    res=reducefn(arr,arr[i]);
+                }
+                return res;
+            }
+            let arr=[1,2,3,4,5,6,7]
+            console.log(customreduce(arr,(end,curr)=>end+curr));
+        </script>
+    </body>
+</html>

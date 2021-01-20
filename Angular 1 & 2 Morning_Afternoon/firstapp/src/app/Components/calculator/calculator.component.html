@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="container-md">
+
+    <h1 class="display-4">Calci</h1>
+
+      <div class="form-floating mb-3">
+        <span class="input-group-text" id="addon-wrapping">Number1</span>
+        <input type="number" class="form-control" id="firstNumber" placeholder="Number1" [(ngModel)] = "firstNumber">
+      </div>
+      <div class="form-floating mb-3">
+        <span class="input-group-text" id="addon-wrapping">Number2</span>
+        <input type="number" class="form-control" id="secondNumber" placeholder="Number2" [(ngModel)] = "secondNumber">
+      </div>
+      <div class="form-floating mb-3">
+        <span class="input-group-text" id="addon-wrapping">Result</span>
+        <input type="number" class="form-control" id="result" placeholder="Result" [(ngModel)] = "result">
+      </div>
+      <div class="btn">
+        <button class="btn btn-outline-dark" (click)="addition()">+</button>
+        <button class="btn btn-outline-dark" (click)="subtract()">-</button>
+        <button class="btn btn-outline-dark" (click)="multiply()">*</button>
+        <button class="btn btn-outline-dark" (click)="divide()">/</button>
+      </div>
+  </div>

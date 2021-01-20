@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <h1>Users</h1>
+    <table class="table table-hover table" id="userData">
+        <thead>
+            <tr>
+                <th scope="col">User_Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of records">
+                <td>{{d.id }}</td>
+                <td>{{d.name | lowercase }}</td>
+                <td>{{d.username | lowercase }}</td>
+                <td>{{d.email }}</td>
+            </tr>
+        </tbody>
+    </table>    
+    <button class="btn btn-outline-dark" (click)="getData()"> Users</button>
+</div>
